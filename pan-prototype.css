@@ -11,3 +11,42 @@ min-height: 100%;
 }*/
 
 .ui-content canvas { margin: 1em 0;  }
+
+/* history chart */
+
+#chart {position: relative; height: 300px;
+  margin: 1em 5em 0 0; padding: 0;
+  border: 2px solid gray; list-style: none;
+  font: 12px Helvetica, Geneva, sans-serif;
+ }
+#chart ul {margin: 0; padding: 0; list-style: none;}
+#chart li {position: absolute; bottom: 0; width: 8.33%; z-index: 2;
+  margin: 0; padding: 0;
+  text-align: center; list-style: none;
+}
+#chart li.month {height: 99%; padding-top: 2px;
+  border-right: 1px dotted #aaa; color: #111;
+  width:8.33%;
+}
+#chart li.bar {
+  width: 50%; margin: 0 25%; color: #111;
+}
+
+#chart li.bar p {margin: 5px -12px 0; padding: 0;}
+
+#chart #may {left: 0;}
+#chart #jun {left: 8.33%;}
+#chart #jul {left: 16.66%;}
+#chart #aug {left: 24.99%;}
+#chart #sep {left: 33.32%;}
+#chart #oct {left: 41.65%;}
+#chart #nov {left: 49.98%;}
+#chart #dec {left: 58.31%;}
+#chart #jan {left: 66.64%;}
+#chart #feb {left: 74.97%;}
+#chart #mar {left: 83.3%;}
+#chart #apr {left: 91.63%; border-right: none;}
+
+#chart #ticks {width: 100%; height: 300px; z-index: 1;}
+#chart #ticks .tick {position: relative; border-bottom: 1px solid #aaa; width: 100%;}
+#chart #ticks .tick p {position: absolute; left: 100%; top: -0.67em; margin: 0 0 0 0.5em; color: #ddd}

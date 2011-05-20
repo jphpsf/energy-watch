@@ -39,7 +39,7 @@
 		$('.ui-btn-dwn-a,.ui-btn-dwn-b,.ui-btn-dwn-e').removeClass('ui-btn-dwn-a ui-btn-dwn-b ui-btn-dwn-e').addClass('ui-btn-dwn-'+theme);
 		$('.ui-btn-up-a,.ui-btn-up-b,.ui-btn-up-e').removeClass('ui-btn-up-a ui-btn-up-b ui-btn-up-e').addClass('ui-btn-up-'+theme);
 		$('.ui-body-a,.ui-body-b,.ui-body-e').removeClass('ui-body-a ui-body-b ui-body-e').addClass('ui-body-'+theme);
-		$('.ui-bar-a,.ui-bar-b,.ui-bar-e').removeClass('ui-bar-a ui-bar-b ui-bar-e').addClass('ui-bar-'+theme);
+		$('.ui-bar-a,.ui-bar-b,.ui-bar-e').filter(':not(li.bar)').removeClass('ui-bar-a ui-bar-b ui-bar-e').addClass('ui-bar-'+theme);
 		$('#options').trigger("pageshow");
 	}
 
