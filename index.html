@@ -5,9 +5,7 @@
 		<title>PAN Prototype</title>
 		<meta name="viewport" content="width=device-width, minimum-scale=1,maximum-scale=1">
 		<link rel="stylesheet" href="jquery.mobile-1.0a4.1.min.css">
-<!--
 		<link rel="stylesheet" href="pan-prototype.css">
--->
 		<script src="jquery-1.5.2.min.js"></script>
 		<script src="jquery.mobile-1.0a4.1.min.js"></script>
 		<script src="pan-prototype.js"></script>
@@ -19,6 +17,9 @@
 
 		</div>
 	-->
+
+
+		<!-- main menu //-->
 		<div data-role="page" data-theme="a" id="home">
 			<div data-role="content">
 				<ul data-role="listview" data-inset="true" data-theme="a">
@@ -61,9 +62,12 @@
 			</div>
 		</div>
 
+		<!-- settings page //-->
 		<div data-role="page" data-theme="a" id="options">
 			<div data-role="header">
+				<a href="index.html" data-icon="delete" data-direction="reverse">Cancel</a>
 				<h1>Options</h1>
+				<a href="index.html" data-icon="check" data-direction="reverse">Save</a>
 			</div>
 			<div data-role="content">
 				<form action="foo.php" method="post">
@@ -94,17 +98,20 @@
 			</div>
 		</div>
 
+		<!-- current consumption //-->
 		<div data-role="page" data-theme="a" id="current">
 			<div data-role="header">
-				<h4>Consumption</h4>
+				<a href="index.html" data-icon="arrow-l" data-direction="reverse">Back</a>
+				<h1>Consumption</h1>
 			</div>
 			<div data-role="content">
-			    <canvas id="current-chart" width="500" height="100"></canvas>
+			    <canvas id="current-chart" height="100"></canvas>
 			</div>
 		</div>
 
 		<div data-role="page" data-theme="a" id="devices">
 			<div data-role="header">
+				<a href="index.html" data-icon="arrow-l" data-direction="reverse">Back</a>
 				<h1>Devices</h1>
 			</div>
 			<div data-role="content">
@@ -122,6 +129,7 @@
 
 		<div data-role="page" data-theme="a" id="device">
 			<div data-role="header">
+				<a href="#devices" data-icon="arrow-l" data-direction="reverse">Back</a>
 				<h1 id="device-name">N/A</h1>
 			</div>
 			<div data-role="content">
@@ -131,25 +139,77 @@
 
 		<div data-role="page" data-theme="a" id="history">
 			<div data-role="header">
+				<a href="index.html" data-icon="arrow-l" data-direction="reverse">Back</a>
 				<h1>History</h1>
 			</div>
 			<div data-role="content">
 			</div>
 		</div>
 
+		<!-- the rate plan selector //-->
 		<div data-role="page" data-theme="a" id="rate">
 			<div data-role="header">
+				<a href="index.html" data-icon="arrow-l" data-direction="reverse">Back</a>
 				<h1>Rate Plan</h1>
 			</div>
 			<div data-role="content">
+				<ul data-role="listview" data-inset="true" data-theme="a">
+					<li data-role="list-divider">Current Rate Plan</li>
+					<li><h3>Rate Plan Foo</h3><p>Very good plan OMG!</p></li>
+				</ul>
+				<ul data-role="listview" data-inset="true" data-theme="a">
+					<li data-role="list-divider">Change Rate Plan</li>
+					<li>
+						<a href="#">
+							<h3>Rate Plan Bar</h3>
+							<p>Save big at night!</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h3>Rate Plan Baz</h3>
+							<p>Save big at night and week ends!</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h3>Rate Plan Woo</h3>
+							<p>Extra savings on week ends!</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h3>Rate Plan Moo</h3>
+							<p>Super awesome!</p>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 
+		<!-- pay the bill //-->
 		<div data-role="page" data-theme="a" id="billing">
 			<div data-role="header">
+				<a href="index.html" data-icon="arrow-l" data-direction="reverse">Back</a>
 				<h1>Billing</h1>
 			</div>
 			<div data-role="content">
+				<ul data-role="listview" data-inset="true" data-theme="a">
+					<li data-role="list-divider">Current Bill: April 2011</li>
+					<li><h3>Amount: $54.00</h3><p>Due May 27th, 2011</p></li>
+					<li><a href="#">View bill</a></li>
+					<li><a href="#">Pay bill</a></li>
+				</ul>
+				<ul data-role="listview" data-inset="true" data-theme="a">
+					<li data-role="list-divider">Past Bills</li>
+					<li><a href="#">March 2011: $54.00</a></li>
+					<li><a href="#">February 2011: $54.00</a></li>
+					<li><a href="#">January 2011: $54.00</a></li>
+					<li><a href="#">December 2010: $54.00</a></li>
+					<li><a href="#">November 2010: $54.00</a></li>
+					<li><a href="#">October 2010: $54.00</a></li>
+				</ul>
+
 			</div>
 		</div>
 	</body>

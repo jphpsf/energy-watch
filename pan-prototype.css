@@ -1,4 +1,4 @@
-html {
+/*html {
 height: 100%;
 }
 body {
@@ -8,4 +8,6 @@ height: 100%;
 }
 .landscape, .landscape .ui-page, .portrait, .portrait .ui-page {
 min-height: 100%;
-}
+}*/
+
+.ui-content canvas { margin: 1em 0;  }
