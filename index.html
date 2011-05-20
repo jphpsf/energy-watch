@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PAN Prototype</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1,maximum-scale=1">
+		<link rel="stylesheet" href="jquery.mobile-1.0a4.1.min.css">
+<!--
+		<link rel="stylesheet" href="pan-prototype.css">
+-->
+		<script src="jquery-1.5.2.min.js"></script>
+		<script src="jquery.mobile-1.0a4.1.min.js"></script>
+		<script src="pan-prototype.js"></script>
+		<script src="smoothie.js"></script>
+	</head>
+	<body data-theme="a">
+	<!--
+		<div data-role="page">
+
+		</div>
+	-->
+		<div data-role="page" data-theme="a" id="home">
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" data-theme="a">
+					<li>
+						<a href="#current">
+							<h3>Current Consumption</h3>
+							<p>View your current consumption</p>
+						</a>
+					</li>
+					<li>
+						<a href="#devices">
+							<h3>Devices &amp; Appliances</h3>
+							<p>Control your devices &amp; appliances</p>
+						</a>
+					</li>
+					<li>
+						<a href="#history">
+							<h3>Consumption History</h3>
+							<p>View historical consumption data</p>
+						</a>
+					</li>
+					<li>
+						<a href="#rate">
+							<h3>Rate Plan</h3>
+							<p>View and change your rate plan</p>
+						</a></li>
+					<li>
+						<a href="#billing">
+							<h3>Billing</h3>
+							<p>View and pay your bill</p>
+						</a>
+					</li>
+					<li>
+						<a href="#options">
+							<h3>Options</h3>
+							<p>Change settings</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div data-role="page" data-theme="a" id="options">
+			<div data-role="header">
+				<h1>Options</h1>
+			</div>
+			<div data-role="content">
+				<form action="foo.php" method="post">
+					<div data-role="fieldcontain">
+						<label for="username">Username</label>
+						<input type="text" name="username" id="username" value="jpc" />
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" value="*********" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="zigbee-key">Zigbee Network Key</label>
+						<input type="number" name="zigbee-key" id="zigbee-key" value="123456789" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="slider">Alert if consumption greater than</label>
+						<input type="range" name="slider" id="slider" value="50" min="0" max="200" />
+					</div>
+					<fieldset data-role="controlgroup" data-type="horizontal">
+						<legend>Theme:</legend>
+						<input type="radio" name="theme" id="dark-theme" value="dark" checked="checked" />
+						<label for="dark-theme">Dark</label>
+						<input type="radio" name="theme" id="light-theme" value="light" />
+						<label for="light-theme">Light</label>
+						<input type="radio" name="theme" id="sun-theme" value="sun" />
+						<label for="sun-theme">Sun</label>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<div data-role="page" data-theme="a" id="current">
+			<div data-role="header">
+				<h4>Consumption</h4>
+			</div>
+			<div data-role="content">
+			    <canvas id="current-chart" width="500" height="100"></canvas>
+			</div>
+		</div>
+
+		<div data-role="page" data-theme="a" id="devices">
+			<div data-role="header">
+				<h1>Devices</h1>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" data-theme="a">
+					<li><a href="#device" class="device-link">Fridge</a></li>
+					<li><a href="#device" class="device-link">Washer</a></li>
+					<li><a href="#device" class="device-link">Dryer</a></li>
+					<li><a href="#device" class="device-link">Dishwasher</a></li>
+					<li><a href="#device" class="device-link">Air Conditioning</a></li>
+					<li><a href="#device" class="device-link">Pool Pump</a></li>
+					<li><a href="#device" class="device-link">Computer</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div data-role="page" data-theme="a" id="device">
+			<div data-role="header">
+				<h1 id="device-name">N/A</h1>
+			</div>
+			<div data-role="content">
+			    <canvas id="device-chart" width="500" height="100"></canvas>
+			</div>
+		</div>
+
+		<div data-role="page" data-theme="a" id="history">
+			<div data-role="header">
+				<h1>History</h1>
+			</div>
+			<div data-role="content">
+			</div>
+		</div>
+
+		<div data-role="page" data-theme="a" id="rate">
+			<div data-role="header">
+				<h1>Rate Plan</h1>
+			</div>
+			<div data-role="content">
+			</div>
+		</div>
+
+		<div data-role="page" data-theme="a" id="billing">
+			<div data-role="header">
+				<h1>Billing</h1>
+			</div>
+			<div data-role="content">
+			</div>
+		</div>
+	</body>
+</html>
