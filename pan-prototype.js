@@ -13,10 +13,10 @@
 			var dataSet = new TimeSeries();
 			setInterval(function() {
 				var now = new Date().getTime();
-				dataSet.append(now, Math.random());
+				dataSet.append(now, Math.floor(Math.random() * 25 + 126 ));
 			}, 1000);
 			// Build the timeline
-			var smoothie = new SmoothieChart({ millisPerPixel: 20, grid: { strokeStyle: '#555555', lineWidth: 1, millisPerLine: 1000, verticalSections: 4 }});
+			var smoothie = new SmoothieChart({ minValue:0, millisPerPixel: 20, grid: { strokeStyle: '#555555', lineWidth: 1, millisPerLine: 1000, verticalSections: 4 }});
 			var orientation = (window.orientation===0?'portrait':'landscape');
 			changeChartOrientation(id, orientation);
 			smoothie.addTimeSeries(dataSet, { strokeStyle: 'rgba(0, 255, 0, 1)', fillStyle: 'rgba(0, 255, 0, 0.2)', lineWidth: 3 });
@@ -25,8 +25,8 @@
 		},
 		changeChartOrientation = function(id, orientation) {
 			var $chart=$('#'+id),
-				width=window.innerWidth*0.96,
-				height=window.innerHeight*0.5;
+				width=Math.floor(window.innerWidth*0.9),
+				height=Math.floor(window.innerHeight*0.5);
 			$chart.attr('width',width);
 			$chart.attr('height',height);
 		};
