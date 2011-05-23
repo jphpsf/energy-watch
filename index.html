@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.manifest">
 	<head>
 		<meta charset="utf-8">
 		<title>PAN Prototype</title>
@@ -12,10 +12,6 @@
 		<link rel="icon" type="image/png" href="images/app-icon.png" />
 		<link rel="stylesheet" href="jquery.mobile-1.0a4.1.min.css">
 		<link rel="stylesheet" href="pan-prototype.css">
-		<script src="jquery-1.5.2.min.js"></script>
-		<script src="jquery.mobile-1.0a4.1.min.js"></script>
-		<script src="pan-prototype.js"></script>
-		<script src="smoothie.js"></script>
 	</head>
 	<body data-theme="a">
 	<!--
@@ -152,7 +148,7 @@
 				<h1>History</h1>
 			</div>
 			<div data-role="content">
-				<!-- Chart inspired from http://localhost/~jpc/examples/jquerymobile/demo.html //-->
+				<!-- Chart inspired from http://meyerweb.com/eric/css/edge/bargraph/demo.html //-->
 				<ul id="chart" class="ui-bar-d">
 
 				<li class="month" id="may">May<br/>2010
@@ -272,14 +268,18 @@
 				<ul data-role="listview" data-inset="true" data-theme="a">
 					<li data-role="list-divider">Past Bills</li>
 					<li><a href="#">March 2011: $54.00</a></li>
-					<li><a href="#">February 2011: $54.00</a></li>
-					<li><a href="#">January 2011: $54.00</a></li>
-					<li><a href="#">December 2010: $54.00</a></li>
-					<li><a href="#">November 2010: $54.00</a></li>
-					<li><a href="#">October 2010: $54.00</a></li>
+					<li><a href="#">February 2011: $95.00</a></li>
+					<li><a href="#">January 2011: $110.00</a></li>
+					<li><a href="#">December 2010: $155.00</a></li>
+					<li><a href="#">November 2010: $135.00</a></li>
+					<li><a href="#">October 2010: $94.00</a></li>
 				</ul>
 
 			</div>
 		</div>
+		<script src="jquery-1.5.2.min.js"></script>
+		<script src="jquery.mobile-1.0a4.1.min.js"></script>
+		<script src="smoothie.js"></script>
+		<script src="pan-prototype.js"></script>
 	</body>
 </html>
