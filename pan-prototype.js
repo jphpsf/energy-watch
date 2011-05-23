@@ -5,15 +5,28 @@
 		$('#device-name').text($(e.target).text());
 	});
 
-	var charts = {},
+	/* handle device switch on/off */
+	$('#device-switch').live('change', function(e){
+		if ($(this).val()=='off') {
+			deviceIsOff=true;
+		} else {
+			deviceIsOff=false;
+		}
+	});
+
+	var deviceIsOff = false,
+		charts = {},
 		initChart = function(id) {
 			if (charts[id]) {
 				return false;
 			}
 			var dataSet = new TimeSeries(), $value=$('#'+id+'-value');
 			setInterval(function() {
-				var now = new Date().getTime(), value=Math.floor(Math.random() * 25 + 126 );
-				$value.text(value+'KW');
+				var now = new Date().getTime(), value=Math.random() * 5 + 5;
+				if ($.mobile.activePage.is('#device') && deviceIsOff===true) {
+					value=0;
+				}
+				$value.text(value.toFixed(2)+'KW');
 				dataSet.append(now, value);
 			}, 1000);
 			// Build the timeline
