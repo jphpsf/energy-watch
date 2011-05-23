@@ -10,10 +10,11 @@
 			if (charts[id]) {
 				return false;
 			}
-			var dataSet = new TimeSeries();
+			var dataSet = new TimeSeries(), $value=$('#'+id+'-value');
 			setInterval(function() {
-				var now = new Date().getTime();
-				dataSet.append(now, Math.floor(Math.random() * 25 + 126 ));
+				var now = new Date().getTime(), value=Math.floor(Math.random() * 25 + 126 );
+				$value.text(value+'KW');
+				dataSet.append(now, value);
 			}, 1000);
 			// Build the timeline
 			var smoothie = new SmoothieChart({ minValue:0, millisPerPixel: 20, grid: { strokeStyle: '#555555', lineWidth: 1, millisPerLine: 1000, verticalSections: 4 }});

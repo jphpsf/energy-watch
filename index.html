@@ -12,6 +12,10 @@
 		<link rel="icon" type="image/png" href="images/app-icon.png" />
 		<link rel="stylesheet" href="jquery.mobile-1.0a4.1.min.css">
 		<link rel="stylesheet" href="pan-prototype.css">
+		<script src="jquery-1.5.2.min.js"></script>
+		<script src="jquery.mobile-1.0a4.1.min.js"></script>
+		<script src="smoothie.js"></script>
+		<script src="pan-prototype.js"></script>
 	</head>
 	<body data-theme="a">
 	<!--
@@ -108,6 +112,7 @@
 			</div>
 			<div data-role="content">
 			    <canvas id="current-chart" height="100"></canvas>
+			    <h1 id="current-chart-value">&nbsp;</h1>
 			</div>
 		</div>
 
@@ -138,6 +143,7 @@
 			</div>
 			<div data-role="content">
 			    <canvas id="device-chart" width="500" height="100"></canvas>
+			    <h1 id="device-chart-value">&nbsp;</h1>
 			</div>
 		</div>
 
@@ -277,9 +283,5 @@
 
 			</div>
 		</div>
-		<script src="jquery-1.5.2.min.js"></script>
-		<script src="jquery.mobile-1.0a4.1.min.js"></script>
-		<script src="smoothie.js"></script>
-		<script src="pan-prototype.js"></script>
 	</body>
 </html>
